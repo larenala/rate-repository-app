@@ -1,8 +1,11 @@
 import React from 'react';
 import { FlatList, View, StyleSheet } from 'react-native';
-import RepositoryItem from './RepositoryItem';
+import RepositoryListItem from './RepositoryListItem';
 
 const styles = StyleSheet.create({
+  list: {
+    marginBottom: 100,
+  },
   separator: {
     height: 10,
   },
@@ -59,7 +62,7 @@ const ItemSeparator = () => <View style={styles.separator} />;
 
 const RepositoryList = () => {
   const renderItem = ({ item }) => (
-    <RepositoryItem item={item} />
+    <RepositoryListItem item={item} />
   );
   return (
     <FlatList
@@ -67,7 +70,7 @@ const RepositoryList = () => {
       ItemSeparatorComponent={ItemSeparator}
       renderItem={renderItem}
       keyExtractor={item => item.id}
-      // other props
+      style={styles.list}
     />
   );
 };

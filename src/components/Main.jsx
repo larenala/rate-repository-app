@@ -6,6 +6,7 @@ import RepositoryList from './RepositoryList';
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
+    backgroundColor: 'lightgrey',
   },
 });
 

@@ -1,11 +1,14 @@
 const theme = {
   colors: {
-    primary: '#24292e',
+    appBarColor: '#24292e',
     headerColor: '#fff',
+    primary: '#0366d6',
+    primaryTextColor: '#555', 
   },
   fontSizes: {
-    header: 26,
-    body: 16,
+    header: 24,
+    bolder: 20,
+    body: 20,
   }
 };
 
