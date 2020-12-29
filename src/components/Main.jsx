@@ -1,21 +1,18 @@
 import React from 'react';
-import { StyleSheet, View, TouchableWithoutFeedback } from 'react-native';
-import AppBar from './AppBar'
+import { StyleSheet, View } from 'react-native';
+import AppBar from './AppBar';
 import RepositoryList from './RepositoryList';
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    flexShrink: 1,
+    display: 'flex',
   },
 });
 
 const Main = () => {
   return (
     <View style={styles.container}>
-      <TouchableWithoutFeedback onPress={() => alert('Pressed!')}>
-        <AppBar />
-      </TouchableWithoutFeedback>
+      <AppBar />
       <RepositoryList />
     </View>
   );
