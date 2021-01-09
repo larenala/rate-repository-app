@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Link } from 'react-router-native';
 import theme from '../theme';
 
 const styles = StyleSheet.create({
@@ -12,11 +13,11 @@ const styles = StyleSheet.create({
   }
 });
 
-const AppBarTab = ({ text }) => {
+const AppBarTab = ({ text, path }) => {
   return (
-    <TouchableWithoutFeedback onPress={() => {}}>
+    <Link to={path} component={TouchableOpacity} activeOpacity={0.5}>
       <Text style={styles.header}>{text}</Text>
-    </TouchableWithoutFeedback>
+    </Link>
   );
 };
 
